@@ -26,6 +26,5 @@ def train_model():
     model.fit(X, y)
 
     return model
-
 def predict_traffic(model, time, day, weather):
     return model.predict([[time, day, weather]])

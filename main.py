@@ -13,7 +13,6 @@ green_time = 30
 # Learning memory
 history = []
 
-
 def adjust_signal(vehicles, current_time):
     global green_time
 
@@ -30,7 +29,7 @@ def adjust_signal(vehicles, current_time):
     # Limit signal time
     green_time = max(20, min(green_time, 90))
 
-    # REWARD SYSTEM (ADD HERE)
+    # REWARD SYSTEM 
     if traffic == "HIGH" and green_time >= 40:
         reward = +2  # good decision
     elif traffic == "LOW" and green_time <= 30:
